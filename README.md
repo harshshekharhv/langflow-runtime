@@ -16,6 +16,32 @@ The health checks can be accessed in your browser at
 
 You can use `func invoke` to send an HTTP request to the function endpoint.
 
+## Examples
+
+Here's a sample custom flow json [DPN_TOOLS](./examples/multiple_tools_flow.json) and a sample curl request for running the flow:
+
+```sh
+curl --location 'http://0.0.0.0:8080' \
+--header 'Ce-Id: akgagfkagfk' \
+--header 'Ce-Source: 64d10f880ada2fb213b3c0a2' \
+--header 'Ce-Specversion: 1.0' \
+--header 'Ce-Type: io.hitachivantara.langflow.execute.v1' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "DPN SQL flow",
+    "inputs": {
+        "input": "Get all tenants from table chargebacktenant only 10 records"   
+    },
+    "tweaks": {
+        "SeldonCore-wBvtJ": {},
+        "ConversationBufferWindowMemory-LbpEx": {},
+        "DpnSqlAgentIntializer-pLLFl": {},
+        "S3Bucket-rVqUs": {},
+        "SQLTool-XuLwm": {}
+    }
+}'
+```
+
 
 ## Testing
 
