@@ -1,0 +1,23 @@
+specVersion: 0.35.0
+name: langflow-runtime
+runtime: python
+registry: harshshekhar15
+image: ""
+imageDigest: ""
+created: 2024-03-12T15:26:14.678789121+05:30
+build:
+  buildpacks: []
+  builder: pack
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: ""
+  remote: false
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness

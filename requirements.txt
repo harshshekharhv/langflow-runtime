@@ -1,0 +1,5 @@
+parliament-functions==0.1.0
+cloudevents==1.10.1
+langflow==0.6.10
+langchainhub==0.1.15
+sqlalchemy_dpn-0.1.0-py3-none-any.whl
