@@ -16,6 +16,24 @@ The health checks can be accessed in your browser at
 
 You can use `func invoke` to send an HTTP request to the function endpoint.
 
+## Running locally
+
+To run the langflow-runtime Knative service locally, follow the below steps:
+- Clone the repository to your local machine.
+- Traverse to the langflow-runtime directory in your local machine.
+  ```sh
+  cd langflow-runtime
+  ```
+- Install required dependencies
+  ```sh
+  pip install -r requirements.txt
+  ```
+- Run the below command to run the service
+  ```sh
+  python -m parliament .
+  ```
+>**NOTE**: The steps mentioned above are proposed assuming the local machine already has virtual env set up and working fine with python version >=3.11.
+
 ## Examples
 
 Here's a sample custom flow json [DPN_TOOLS](./examples/multiple_tools_flow.json) and a sample curl request for running the flow:
